@@ -1,0 +1,135 @@
+.hero {
+  z-index: -1;
+}
+
+.fullscreen {
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+}
+
+.content h1 {
+  font-size: 10vw;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+
+.content h1 > span {
+  color: var(--primary-color);
+  display: block;
+  font-size: 0.85em;
+}
+
+.content h3 {
+  font-weight: 600;
+  font-size: 5vw;
+  margin-bottom: 40px;
+}
+
+.button {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 4vw;
+  position: relative;
+  transition: all 300ms ease-out;
+  border-bottom: 2px solid rgba(0,0,0,0);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.socials {
+  position: absolute;
+  bottom: 20px;
+}
+
+.socials::before {
+  content: 'Follow On';
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 0.8em;
+  margin-bottom: 12px;
+}
+
+.socials a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--dark-color);
+  transition: color 300ms ease-in-out;
+}
+
+.socials a:hover {
+  color: var(--primary-color);
+}
+
+.socials a:first-child {
+  margin-right: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .content h1 {
+    font-size: 7vw;
+  }
+  .content h1 > span {
+    font-size: 6.25vw;
+  }
+  .content h3 {
+    font-size: 3.5vw;
+    margin-bottom: 60px;
+  }
+  .button {
+    padding: 12px;
+    font-size: 2.5vw;
+    border-bottom: 2px solid rgba(0,0,0,0);
+  }
+  .button::before {
+    content: url(/img/arrow.svg);
+    width: 25px;
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: -20px;
+    opacity: 0;
+    transition: all 300ms ease-out;
+    transition-delay: 80ms;
+  }
+  .button:hover::before {
+    left: 0;
+    opacity: 1;
+  }
+  .button:hover {
+    padding-left: 36px;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+  }
+  .socials {
+    bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content h1 {
+    font-size: 85px;
+  }
+  .content h1 > span {
+    font-size: 75px;
+  }
+  .content h3 {
+    font-size: 36px;
+  }
+  .button {
+    font-size: 26px;
+  }
+}

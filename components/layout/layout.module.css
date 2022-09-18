@@ -1,0 +1,206 @@
+.layout {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.layout .bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  transition: all 300ms ease-in-out;
+  z-index: 99;
+}
+
+.layout .logoLight {
+  display: none;
+}
+
+.layout .logoDark {
+  display: block;
+}
+
+.layout .barPrimary {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.layout .barPrimary .logoLight {
+  display: block;
+}
+
+.layout .barPrimary .logoDark {
+  display: none;
+}
+
+.openBtn,
+.closeBtn {
+  width: 40px;
+  border: none;
+  background: none;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.layout .openBtn svg {
+  stroke: var(--dark-color);
+}
+
+.layout .barPrimary .openBtn svg {
+  stroke: #fff;
+}
+
+/*
+Light layout
+*/
+.headerLight .bar {
+  background-color: transparent;
+}
+
+.layout .barPrimary {
+  background-color: var(--primary-color);
+}
+
+.headerLight .logoLight {
+  display: block;
+}
+
+.headerLight .logoDark {
+  display: none;
+}
+
+.headerLight .openBtn svg {
+  stroke: #fff;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  opacity: 0.8;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.closeBtn > svg {
+  stroke: #fff;
+}
+
+.overlayMenu {
+  width: 100%;
+  height: 0vh;
+  background-color: var(--primary-color);
+  opacity: 0;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 350ms ease-in-out;
+  transition-delay: 100ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.overlayMenu.open {
+  height: 100vh;
+  opacity: 1;
+  z-index: 999;
+}
+
+.overlayMenu .container {
+  width: 80%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.businessInfo {
+  font-size: 0.85em;
+  padding-bottom: 30px;
+}
+
+.businessInfo > div > div {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.animateIn > div > div {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+}
+
+.animateIn > div > div:nth-child(1),
+.animateIn > div > div:nth-child(2) {
+  transition-delay: 700ms;
+}
+
+.animateIn > div > div:nth-child(3){
+  transition-delay: 800ms;
+}
+
+.businessInfo .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.businessInfo .container > div {
+  padding: 16px;
+}
+
+.businessInfo span {
+  display: block;
+  opacity: 0.6;
+}
+
+.businessInfo a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.main {
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 660px) {
+  .layout .bar {
+    padding: 60px;
+  }
+  .layout .barPrimary {
+    padding: 40px 60px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .overlayMenu {
+    flex-direction: row;
+  }
+  .businessInfo {
+    flex-grow: 1;
+    font-size: 1.2em;
+  }
+  .businessInfo .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

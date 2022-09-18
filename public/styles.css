@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600;800');
+
+:root {
+  --primary-color: #0505fe;
+  --primary-color-900: #0000b3;
+  --primary-color-700: #0000de;
+  --primary-color-300: #4f4fff;
+  --primary-color-100: #b1b1ff;
+
+  --dark-color: #2e2e2e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--dark-color);
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+
+/*
+Preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  z-index: 9999;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 350ms ease-out;
+  transition-delay: 700ms;
+}
+
+.preloader img {
+  animation-name: bouncing;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  transform: translateY(0);
+}
+
+.loaded {
+  opacity: 0;
+  z-index: -1;
+}
+
+@keyframes bouncing {
+  0%{
+    transform: translateY(0);
+  }
+  35%{
+    transform: translateY(-10px);
+  }
+  70%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+/* 
+Framer Motion */
+
+.framerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

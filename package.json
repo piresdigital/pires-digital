@@ -1,0 +1,33 @@
+{
+  "name": "pires-digital",
+  "version": "1.0.0",
+  "description": "Pires Digital Limited Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "npm run build && firebase emulators:start --only functions,hosting",
+    "shell": "npm run build && firebase functions:shell",
+    "deploy": "firebase deploy --only functions,hosting",
+    "logs": "firebase functions:log"
+  },
+  "author": "dhavidy@piresdigital.com",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "firebase": "^9.9.4",
+    "firebase-admin": "^11.0.1",
+    "firebase-functions": "^3.23.0",
+    "framer-motion": "^7.3.5",
+    "next": "^12.2.5",
+    "nodemailer": "^6.7.8",
+    "pires-digital": "file:",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^2.3.0",
+    "firebase-tools": "^11.8.0"
+  }
+}

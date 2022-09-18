@@ -1,0 +1,83 @@
+.nav {
+  flex-grow: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav .container {
+  width: 80%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 300ms ease-in-out;
+  
+}
+
+.nav li {
+  border-bottom: 2px solid rgba(255,255,255,0);
+  padding-bottom: 0;
+  transition: border 200ms ease-out, padding-bottom 300ms ease-in;
+}
+
+.nav li:hover {
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.animateIn li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animateIn li:nth-child(1) a {
+  transition-delay: 200ms;
+}
+
+.animateIn li:nth-child(2) a {
+  transition-delay: 300ms;
+}
+.animateIn li:nth-child(3) a {
+  transition-delay: 400ms;
+}
+.animateIn li:nth-child(4) a {
+  transition-delay: 500ms;
+}
+.animateIn li:nth-child(5) a {
+  transition-delay: 600ms;
+}
+
+@media screen and (min-width: 660px) {
+  .nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nav ul {
+    flex-direction: column;
+  }
+  .nav a {
+    font-size: 2.2em;
+  }
+}
