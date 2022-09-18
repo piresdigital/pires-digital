@@ -78,7 +78,7 @@ export default function Services(props){
 
         <motion.div
           variants={variants}
-          initial='hiddenLeft'
+          initial='hiddenBottom'
           whileInView='show'
           transition={{delay: 0.35}}
         >
@@ -93,7 +93,7 @@ export default function Services(props){
 
         <motion.div
           variants={variants}
-          initial='hiddenRight'
+          initial='hiddenBottom'
           whileInView='show'
           transition={{delay: 0.35}}
         >

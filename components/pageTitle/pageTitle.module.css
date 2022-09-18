@@ -1,7 +1,7 @@
 .pageTitle {
   position: relative;
   color: #fff;
-  padding: 170px 0 40px;
+  padding: 130px 0 30px;
   margin-bottom: 80px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,6 +34,10 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0,0,80,0.8);
+}
+
+.pageTitle h1 {
+  font-size: 1.8em;
 }
 
 .breadcrumb {

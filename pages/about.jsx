@@ -42,7 +42,7 @@ export default function About() {
               <div className='title'>
                 <motion.div 
                   variants={variants}
-                  initial='hiddenLeft'
+                  initial='hiddenBottom'
                   whileInView='show'
                   transition={{delay: 0.35, duration: 0.5}}
                 >
@@ -53,9 +53,9 @@ export default function About() {
               <div className='copy'>
                 <motion.div 
                   variants={variants}
-                  initial='hiddenRight'
+                  initial='hiddenBottom'
                   whileInView='show'
-                  transition={{delay: 0.35, duration: 0.5}}
+                  transition={{delay: 0.45, duration: 0.5}}
                 >
                   <p>Here at Pires Digital we have a vision for how digital could, and should, be better, more agile, and transparent. We also recognised that New Zealand businesses want better clarity, value.
                   <strong>“Going beyond for our customer success”</strong> is the maxim that drives us.</p>
@@ -123,7 +123,7 @@ export default function About() {
             }
 
             .aboutUs .callout .title {
-              font-size: 1.55em;
+              font-size: 1.3em;
               line-height: 1.25;
               position: relative;
               flex-grow: 1;
@@ -160,6 +160,7 @@ export default function About() {
                 text-align: center;
                 line-height: 1.4;
                 margin-bottom: 0;
+                font-size: 1.45em;
               }
             }
 

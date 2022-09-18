@@ -4,6 +4,7 @@
 
 .fullscreen {
   height: 100%;
+  padding-bottom: 60px;
 }
 
 .content {
@@ -52,7 +53,7 @@
 
 .socials {
   position: absolute;
-  bottom: 20px;
+  bottom: 90px;
 }
 
 .socials::before {
