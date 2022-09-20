@@ -7,6 +7,19 @@ export default function ContactForm(){
   const [formMessage, setFormMessage] = useState(false);
   const submitButtonRef = useRef(null);
 
+  const escape = (value) => {
+    const valueEscaped = value.trim()
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\//g, '&#x2F;')
+      .replace(/\\/g, '&#x5C;')
+      .replace(/`/g, '&#96;');
+    return valueEscaped;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     e.target.setAttribute('disabled', 'disabled');
@@ -14,11 +27,11 @@ export default function ContactForm(){
     submitButtonRef.current.value = 'Sending Your Message.';
 
     const formData = {
-      name : e.target.name.value.trim(),
-      email : e.target.email.value.trim(),
-      phone : e.target.phone.value.trim(),
-      companyName : e.target.companyName.value.trim(),
-      message : e.target.message.value.trim(),
+      name : escape(e.target.name.value),
+      email : escape(e.target.email.value),
+      phone : escape(e.target.phone.value),
+      companyName : escape(e.target.companyName.value),
+      message : escape(e.target.message.value)
     }
 
     fetch('/api/contact', {
