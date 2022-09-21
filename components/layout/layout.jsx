@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Nav from '../nav/nav';
 import styles from './layout.module.css';
+import ToTop from '../atoms/ToTop';
 
 export default function Header(props) {
   
@@ -110,5 +111,6 @@ export default function Header(props) {
       <main className={styles.main}>{ props.children }</main>
 
     </div>
+    <ToTop />
   </>
 }
