@@ -59,11 +59,12 @@ export default function ToTop() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid #fff;
         cursor: pointer;
         transition: opacity 300ms ease-out;
-        background-color: var(--primary-color-300);
+        background-color: var(--primary-color);
         color: #fff;
-        opacity: 0.7;
+        opacity: 0.6;
       }
       .scroll-to-top a:hover {
         opacity: 1;

@@ -58,7 +58,7 @@ export default function Seo(props){
             line-height: 1.2;
           }
           .title h1 span {
-            font-size: 1.2em;
+            font-size: 1em;
             color: var(--primary-color);
           }
 
@@ -75,6 +75,103 @@ export default function Seo(props){
       </div>
       </motion.div>
     </Container>
+
+    <section className='section'>
+      <Container>
+        <div className="content">
+
+          <motion.div 
+            variants={variants}
+            initial='hiddenBottom'
+            whileInView='show'
+            transition={{delay: 0.35}}
+            >
+            <div className='content_item'>
+              <img className='content_illustration' src="/img/illustrations/growth-analytics.svg" alt="Grow your online presence" />
+              <div className='content_copy'>
+                <h2>Grow Your Online Presence With Us</h2>
+                <p>Skyrocket your rankings and drive your business further online with customised search engine optimisation services for your business. We help you generate meaningful, organic web traffic for your website.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            variants={variants}
+            initial='hiddenBottom'
+            whileInView='show'
+            transition={{delay: 0.35}}
+            >
+            <div className='content_item content_item--reverse'>
+              <img className='content_illustration' src="/img/illustrations/scale-business.svg" alt="Scale your business" />
+              <div className='content_copy'>
+                <h2>Scale Your Business using Google AdWords</h2>
+                <p>Google Ads are the fastest method to boost your online traffic and accelerate business growth. It's digital marketing that delivers instant results - you'll reach potential customers searching for your product or service in just a few days. By using Google Ads or other PPC traffic sources, you stay ahead of your competitors and proactively find customers rather than sitting around waiting for them to find you. What makes Google Ads and PPC marketing so powerful is scalability. You can test the ads in a small sample and ensure every detail is optimised for converting browsers into buyers. Once you find a winning formula, you can increase the scale and watch as the sales flow in like clockwork.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            variants={variants}
+            initial='hiddenBottom'
+            whileInView='show'
+            transition={{delay: 0.35}}
+            >
+            <div className='content_item'>
+              <img className='content_illustration' src="/img/illustrations/data-trends.svg" alt="Data trends" />
+              <div className='content_copy'>
+                <h2>Why Right NOW Is The Best Time To Invest In Google Ads</h2>
+                <p>Recent statistics show 46% of internet users can't tell the difference between paid ads and organic results. That's because targeted ads are becoming smarter and harder to recognise. There has literally never been a better time to invest in PPC advertising than right now. </p>
+                <p>Of course, you still need to devise and implement an effective strategy. Our expert team can monitor your progress, then use data to fine-tune your campaign and improve results. We'll optimise for conversions, not clicks, to minimise your total cost and maximise your profits.</p>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </Container>
+      <style jsx>
+        {`
+        .section{
+          margin: 90px 0;
+        }
+        .content_item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justtify-content: center;
+          row-gap: 60px;
+          margin-bottom: 90px;
+        }
+        .content_illustration {
+          max-width: 300px;
+        }
+        .content_copy h2 {
+          font-size: 2em;
+          margin-bottom: 30px;
+          text-transform: capitalize;
+        }
+        @media screen and (min-width: 800px) {
+          .content_item {
+            flex-direction: row;
+            column-gap: 100px;
+            margin-bottom: 200px;
+          }
+          .content_item--reverse {
+            flex-direction: row-reverse;
+          }
+          .content_illustration {
+            max-width: 400px;
+          }
+          .content_copy {
+            font-size: 1.2em;
+          }
+          .content_copy h2 {
+            line-height: 1.25;
+            max-width: 70%;
+          }
+        }
+        `}
+      </style>
+    </section>
 
     
 

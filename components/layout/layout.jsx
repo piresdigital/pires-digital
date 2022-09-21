@@ -1,8 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Nav from '../nav/nav';
 import styles from './layout.module.css';
 import ToTop from '../atoms/ToTop';
+
+import logoDark from '../../public/img/logo-dark.png';
+import logoLight from '../../public/img/logo-light.png';
 
 export default function Header(props) {
   
@@ -32,10 +36,10 @@ export default function Header(props) {
 
         {/* load different logo based on parent */}
         <div className={styles.logoDark}>
-          <Link href="/"><a><img src='/img/logo-dark.png' alt='Pires Digital' /></a></Link>
+          <Link href="/"><a><Image src={ logoDark } alt='Pires Digital' /></a></Link>
         </div>
         <div className={styles.logoLight}>
-          <Link href="/"><a><img src='/img/logo-light.png' alt='Pires Digital' /></a></Link>
+          <Link href="/"><a><Image src={ logoLight } alt='Pires Digital' /></a></Link>
         </div>
         
         <button 

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './cards-one.module.css';
 
 export default function CardOne({image, imageAlt, children}){
@@ -5,7 +6,9 @@ export default function CardOne({image, imageAlt, children}){
     <div className={styles.card}>
       { image && 
         <div className={styles.image}>
-          <img src={image} alt={imageAlt} />
+          <span>
+            <Image src={image} alt={imageAlt} />
+          </span>
         </div>
       }
       <div className={styles.content}>

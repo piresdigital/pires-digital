@@ -10,7 +10,8 @@
   margin-bottom: 40px;
 }
 
-.image img {
+.image span {
+  display: block;
   max-width: 300px;
   margin: 0 auto;
 }

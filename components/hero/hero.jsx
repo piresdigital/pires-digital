@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import Metaball from '../atoms/metaball';
 import styles from './hero.module.css';
 
 export default function Hero() {
@@ -25,7 +24,6 @@ export default function Hero() {
 
   return<>
   <div className={`${styles.hero} ${styles.fullscreen}`}>
-    <Metaball />
     <div className={`${styles.content}`}>
       <div className={styles.container}>
         <motion.h1 

@@ -24,7 +24,7 @@ export default function Footer() {
                 <a>Ecommerce Website</a>
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link href='/services/web-mobile-app'>
                 <a>Web &amp; Mobile App</a>
               </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
               <Link href='/services/seo'>
                 <a>Search Engine (SEO)</a>
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
         <div className={styles.nav}>
